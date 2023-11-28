@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "@types/fhir": "^0.0.40",
+    "@types/node-fetch": "^2.6.9",
+    "express": "^4.18.2",
+    "fhir": "^4.12.0",
+    "node-fetch": "^3.3.2"
+  }
+}
