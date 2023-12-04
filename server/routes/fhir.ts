@@ -51,6 +51,7 @@ async function fetchWithRetry(
  */
 router.get("*", async (req: Request, res: Response) => {
   const { authorization } = req.headers;
+//   let fhirReceived: boolean = false;
   if (!authorization) {
     return res.status(401).send("All requests must be authenticated.");
   }
@@ -62,12 +63,26 @@ router.get("*", async (req: Request, res: Response) => {
 
   try {
     const fhirResp = await fetchWithRetry(href, authorization);
-    const fhirBody: Bundle = await fhirResp.json();
+    const fhirBody: Bundle | unknown = await fhirResp.json();
     res.send(fhirBody);
+    // fhirReceived = true;
   } catch (err) {
     console.log(`Error retrieving FHIR: ${err}`);
     return res.status(500).send(`Error retrieving FHIR: ${err}`);
   }
+
+//   if(fhirReceived) {
+//     try {
+//         const eobResp = await fetchWithRetry(`${href}/ExplanationOfBenefit`, authorization);
+//         console.log(`${href}/ExplanationOfBenefit`);
+//         const eobBody: Bundle = await eobResp.json();
+//         res.send(eobBody);
+//         // console.log(eobBody)
+//     } catch (err) {
+//         console.log(`Error retrieving EOB: ${err}`);
+//         return res.status(500).send(`Error retrieving EOB: ${err}`);
+//       }
+//   }
 });
 
-export default router;
+export {router as fhirRouter, fetchWithRetry};

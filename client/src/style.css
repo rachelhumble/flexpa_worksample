@@ -1,8 +1,9 @@
 html {
-    background-color: #f9fafb;
+    background-color: #f9fafb !important;
     line-height: 1.5;
     tab-size: 4;
     font-family: Avenir, Helvetica, Arial, sans-serif;
+    color: rgb(75 85 99) !important;
   }
   
   .launch-btn {
@@ -70,7 +71,7 @@ html {
       Courier New,
       monospace;
     font-size: 1em;
-    color: rgb(75 85 99);
+    color: rgb(75 85 99) !important;
   }
   
   .table-heading {

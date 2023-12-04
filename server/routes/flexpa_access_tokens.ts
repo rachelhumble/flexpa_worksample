@@ -15,6 +15,8 @@ interface FlexpaAccessTokenBody {
  * POST /flexpa-access-token
  * Exchanges your `publicToken` for an `access_token`
  */
+
+
 router.post("/", async (req: Request, res: Response) => {
   const { publicToken } = req.body as FlexpaAccessTokenBody;
 
