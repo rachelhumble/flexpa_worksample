@@ -102,7 +102,7 @@ function App() {
         <Typography variant="h2">Flexpa Work Sample</Typography>
       </Grid>
       {authorized && isLoading && <Grid xs={12}><Typography variant='h6'>Loading...</Typography></Grid>}
-      {authorized && !isLoading && eob ? <Eob eobDisplay={eob} /> : <Grid xs={12}>
+      {authorized && !isLoading && eob ? <Eob eobDisplay={eob} /> : <Grid xs={12} id="eob-grid">
         <Button onClick={() => FlexpaLink.open()} variant="contained" style={{ marginTop: '10px' }}>
           Connect your health plan with Flexpa Link
         </Button>
