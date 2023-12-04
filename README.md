@@ -1,6 +1,6 @@
 # <img src="./client/public/flexpa_logo.png" height="60px" align="center" alt="Flexpa logo"> Flexpa Work Sample - Rachel Humble
 
-### This small app uses much of the "quick start" boilerplate code to get the /ExplanationOfBenefit resource and crudely display a small amount of the returned data.
+### This small app uses much of the "quick start" [boilerplate](https://www.flexpa.com/docs/getting-started/quickstart) code to get the /ExplanationOfBenefit resource and crudely display a small amount of the returned data.
 
 ## To use:
 1. Clone repo: https://github.com/rachelhumble/flexpa_worksample.git
