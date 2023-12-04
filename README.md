@@ -7,16 +7,17 @@
 2. Get API keys
     * Create an account in the Flexpa [developer portal](https://portal.flexpa.com/) to get your test mode keys.
 3. Configure .env files
-    * In your /server .env, set the following variables:
+    * In the /server directory, create a .env, set the following variables:
         - FLEXPA_PUBLIC_API_BASE_URL=https://api.flexpa.com
         - FLEXPA_API_SECRET_KEY=your_secret_test_mode_key
-    * In the /client .env, set the following variables:
+    * In the /client directory, create a .env, set the following variables:
         - VITE_SERVER_URL=http://localhost:6060
         - VITE_FLEXPA_PUBLISHABLE_KEY=your_publishable_test_mode_key
 4. Install dependencies:
-    ```npm install```
+    ```cd client npm install```
+    ```cd server npm install```
 5. Compile:
-    ```npm run build```
+    ```cd server npm run build```
 6. Run the project by running both the frontend and server:
     * ```cd client npm run dev```
     * ```cd server npm run dev```
